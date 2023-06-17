@@ -1,0 +1,85 @@
+[2023-06-14 20:08:56,369] {scheduler_job.py:182} INFO - Started process (PID=1663) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:08:56,371] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:08:56,373] {logging_mixin.py:104} INFO - [2023-06-14 20:08:56,373] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:08:56,387] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:08:56,403] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.039 seconds
+[2023-06-14 20:09:06,454] {scheduler_job.py:182} INFO - Started process (PID=1673) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:06,456] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:06,458] {logging_mixin.py:104} INFO - [2023-06-14 20:09:06,457] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:06,467] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:06,484] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.034 seconds
+[2023-06-14 20:09:16,548] {scheduler_job.py:182} INFO - Started process (PID=1683) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:16,549] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:16,551] {logging_mixin.py:104} INFO - [2023-06-14 20:09:16,551] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:16,558] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:16,572] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.028 seconds
+[2023-06-14 20:09:26,628] {scheduler_job.py:182} INFO - Started process (PID=1693) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:26,632] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:26,634] {logging_mixin.py:104} INFO - [2023-06-14 20:09:26,634] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:26,644] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:26,663] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.042 seconds
+[2023-06-14 20:09:36,727] {scheduler_job.py:182} INFO - Started process (PID=1703) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:36,730] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:36,732] {logging_mixin.py:104} INFO - [2023-06-14 20:09:36,732] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:36,740] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:36,756] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.034 seconds
+[2023-06-14 20:09:46,800] {scheduler_job.py:182} INFO - Started process (PID=1713) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:46,803] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:46,805] {logging_mixin.py:104} INFO - [2023-06-14 20:09:46,804] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:46,812] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:46,824] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.027 seconds
+[2023-06-14 20:09:56,871] {scheduler_job.py:182} INFO - Started process (PID=1723) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:56,873] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:09:56,875] {logging_mixin.py:104} INFO - [2023-06-14 20:09:56,875] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:56,882] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:09:56,897] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.031 seconds
+[2023-06-14 20:10:06,947] {scheduler_job.py:182} INFO - Started process (PID=1733) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:06,950] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:06,952] {logging_mixin.py:104} INFO - [2023-06-14 20:10:06,952] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:06,962] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:06,978] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.036 seconds
+[2023-06-14 20:10:17,029] {scheduler_job.py:182} INFO - Started process (PID=1743) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:17,032] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:17,033] {logging_mixin.py:104} INFO - [2023-06-14 20:10:17,033] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:17,039] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:17,052] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.026 seconds
+[2023-06-14 20:10:27,101] {scheduler_job.py:182} INFO - Started process (PID=1753) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:27,119] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:27,121] {logging_mixin.py:104} INFO - [2023-06-14 20:10:27,121] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:27,129] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:27,144] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.048 seconds
+[2023-06-14 20:10:37,218] {scheduler_job.py:182} INFO - Started process (PID=1763) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:37,221] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:37,222] {logging_mixin.py:104} INFO - [2023-06-14 20:10:37,222] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:37,231] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:37,247] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.033 seconds
+[2023-06-14 20:10:47,285] {scheduler_job.py:182} INFO - Started process (PID=1771) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:47,286] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:47,288] {logging_mixin.py:104} INFO - [2023-06-14 20:10:47,288] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:47,295] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:47,309] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.027 seconds
+[2023-06-14 20:10:57,377] {scheduler_job.py:182} INFO - Started process (PID=1778) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:57,381] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:10:57,384] {logging_mixin.py:104} INFO - [2023-06-14 20:10:57,384] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:57,396] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:10:57,423] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.051 seconds
+[2023-06-14 20:11:07,503] {scheduler_job.py:182} INFO - Started process (PID=1788) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:07,505] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:11:07,507] {logging_mixin.py:104} INFO - [2023-06-14 20:11:07,507] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:07,516] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:07,533] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.035 seconds
+[2023-06-14 20:11:17,605] {scheduler_job.py:182} INFO - Started process (PID=1798) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:17,610] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:11:17,613] {logging_mixin.py:104} INFO - [2023-06-14 20:11:17,613] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:17,625] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:17,645] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.045 seconds
+[2023-06-14 20:11:27,719] {scheduler_job.py:182} INFO - Started process (PID=1808) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:27,722] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:11:27,724] {logging_mixin.py:104} INFO - [2023-06-14 20:11:27,724] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:27,733] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:27,750] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.035 seconds
+[2023-06-14 20:11:37,820] {scheduler_job.py:182} INFO - Started process (PID=1818) to work on /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:37,822] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/python_operator_dag.py for tasks to queue
+[2023-06-14 20:11:37,824] {logging_mixin.py:104} INFO - [2023-06-14 20:11:37,824] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:37,832] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/python_operator_dag.py
+[2023-06-14 20:11:37,848] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/python_operator_dag.py took 0.033 seconds

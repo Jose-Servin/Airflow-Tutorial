@@ -1,0 +1,57 @@
+[2023-06-15 16:35:11,958] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15 16:35:11,968] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15 16:35:11,969] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15 16:35:11,970] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-15 16:35:11,971] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15 16:35:11,984] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Returning_age> on 2023-06-14T00:00:00+00:00
+[2023-06-15 16:35:11,988] {standard_task_runner.py:52} INFO - Started process 4293 to run task
+[2023-06-15 16:35:11,993] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'python_dag_v6', 'Returning_age', '2023-06-14T00:00:00+00:00', '--job-id', '13', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/python_operator_dag.py', '--cfg-path', '/tmp/tmpla6wee0u', '--error-file', '/tmp/tmp1e_bzis3']
+[2023-06-15 16:35:11,997] {standard_task_runner.py:77} INFO - Job 13: Subtask Returning_age
+[2023-06-15 16:35:12,048] {logging_mixin.py:104} INFO - Running <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [running]> on host 76163bdcc9dc
+[2023-06-15 16:35:12,090] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=python_dag_v6
+AIRFLOW_CTX_TASK_ID=Returning_age
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-14T00:00:00+00:00
+[2023-06-15 16:35:12,092] {taskinstance.py:1455} ERROR - 'TaskInstance' object has no attribute 'xcoms_push'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/python_operator_dag.py", line 27, in _get_age
+    ti.xcoms_push(key="age", value=10)
+AttributeError: 'TaskInstance' object has no attribute 'xcoms_push'
+[2023-06-15 16:35:12,097] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=python_dag_v6, task_id=Returning_age, execution_date=20230614T000000, start_date=20230615T163511, end_date=20230615T163512
+[2023-06-15 16:35:12,125] {local_task_job.py:146} INFO - Task exited with return code 1
+[2023-06-15 16:37:09,079] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15 16:37:09,089] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [queued]>
+[2023-06-15 16:37:09,090] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15 16:37:09,091] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-15 16:37:09,091] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-15 16:37:09,102] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Returning_age> on 2023-06-14T00:00:00+00:00
+[2023-06-15 16:37:09,106] {standard_task_runner.py:52} INFO - Started process 4415 to run task
+[2023-06-15 16:37:09,110] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'python_dag_v6', 'Returning_age', '2023-06-14T00:00:00+00:00', '--job-id', '14', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/python_operator_dag.py', '--cfg-path', '/tmp/tmp7sgpzwyk', '--error-file', '/tmp/tmpchczn2t0']
+[2023-06-15 16:37:09,113] {standard_task_runner.py:77} INFO - Job 14: Subtask Returning_age
+[2023-06-15 16:37:09,158] {logging_mixin.py:104} INFO - Running <TaskInstance: python_dag_v6.Returning_age 2023-06-14T00:00:00+00:00 [running]> on host 76163bdcc9dc
+[2023-06-15 16:37:09,194] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=python_dag_v6
+AIRFLOW_CTX_TASK_ID=Returning_age
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-14T00:00:00+00:00
+[2023-06-15 16:37:09,210] {python.py:118} INFO - Done. Returned value was: None
+[2023-06-15 16:37:09,220] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=python_dag_v6, task_id=Returning_age, execution_date=20230614T000000, start_date=20230615T163709, end_date=20230615T163709
+[2023-06-15 16:37:09,244] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-06-15 16:37:09,282] {local_task_job.py:146} INFO - Task exited with return code 0
