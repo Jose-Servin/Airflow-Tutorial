@@ -1,0 +1,99 @@
+[2023-06-18 02:37:40,871] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 02:37:40,883] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 02:37:40,884] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 02:37:40,885] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-18 02:37:40,887] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 02:37:40,902] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): create_pet_table> on 2023-06-17T00:00:00+00:00
+[2023-06-18 02:37:40,906] {standard_task_runner.py:52} INFO - Started process 3805 to run task
+[2023-06-18 02:37:40,911] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Postgres_airflow_connection_test_v01', 'create_pet_table', '2023-06-17T00:00:00+00:00', '--job-id', '4', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres.py', '--cfg-path', '/tmp/tmp_w34qxc6', '--error-file', '/tmp/tmpk2ks77ri']
+[2023-06-18 02:37:40,916] {standard_task_runner.py:77} INFO - Job 4: Subtask create_pet_table
+[2023-06-18 02:37:40,999] {logging_mixin.py:104} INFO - Running <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [running]> on host 6ce064501e45
+[2023-06-18 02:37:41,053] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=Postgres_airflow_connection_test_v01
+AIRFLOW_CTX_TASK_ID=create_pet_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
+[2023-06-18 02:37:41,055] {postgres.py:69} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          
+[2023-06-18 02:37:41,070] {base.py:74} INFO - Using connection to: id: postgres_localhost. Host: localhost, Port: 54292, Schema: airflow, Login: airflow, Password: XXXXXXXX, extra: None
+[2023-06-18 02:37:41,072] {taskinstance.py:1455} ERROR - could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 54292?
+could not connect to server: Cannot assign requested address
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 54292?
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/dbapi.py", line 173, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/hooks/postgres.py", line 108, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/home/airflow/.local/lib/python3.6/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 54292?
+could not connect to server: Cannot assign requested address
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 54292?
+
+[2023-06-18 02:37:41,077] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=Postgres_airflow_connection_test_v01, task_id=create_pet_table, execution_date=20230617T000000, start_date=20230618T023740, end_date=20230618T023741
+[2023-06-18 02:37:41,123] {local_task_job.py:146} INFO - Task exited with return code 1
+[2023-06-18 02:55:30,303] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 02:55:30,313] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 02:55:30,314] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 02:55:30,315] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-18 02:55:30,316] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 02:55:30,330] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): create_pet_table> on 2023-06-17T00:00:00+00:00
+[2023-06-18 02:55:30,336] {standard_task_runner.py:52} INFO - Started process 5893 to run task
+[2023-06-18 02:55:30,340] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Postgres_airflow_connection_test_v01', 'create_pet_table', '2023-06-17T00:00:00+00:00', '--job-id', '8', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres.py', '--cfg-path', '/tmp/tmpkf0ujmpg', '--error-file', '/tmp/tmp6udsh49e']
+[2023-06-18 02:55:30,345] {standard_task_runner.py:77} INFO - Job 8: Subtask create_pet_table
+[2023-06-18 02:55:30,391] {logging_mixin.py:104} INFO - Running <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [running]> on host 6ce064501e45
+[2023-06-18 02:55:30,433] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=Postgres_airflow_connection_test_v01
+AIRFLOW_CTX_TASK_ID=create_pet_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
+[2023-06-18 02:55:30,434] {postgres.py:69} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          
+[2023-06-18 02:55:30,444] {base.py:74} INFO - Using connection to: id: postgres_localhost. Host: host.docker.internal, Port: 5432, Schema: airflow, Login: airflow, Password: XXXXXXXX, extra: None
+[2023-06-18 02:55:30,464] {dbapi.py:180} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          , parameters: None
+[2023-06-18 02:55:30,492] {dbapi.py:186} INFO - Rows affected: -1
+[2023-06-18 02:55:30,502] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=Postgres_airflow_connection_test_v01, task_id=create_pet_table, execution_date=20230617T000000, start_date=20230618T025530, end_date=20230618T025530
+[2023-06-18 02:55:30,526] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-06-18 02:55:30,553] {local_task_job.py:146} INFO - Task exited with return code 0
