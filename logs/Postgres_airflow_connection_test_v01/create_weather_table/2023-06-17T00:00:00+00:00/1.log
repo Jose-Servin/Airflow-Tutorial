@@ -1,0 +1,43 @@
+[2023-06-18 20:57:07,822] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_weather_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:57:07,843] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_weather_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:57:07,844] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:57:07,845] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-18 20:57:07,846] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:57:07,854] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): create_weather_table> on 2023-06-17T00:00:00+00:00
+[2023-06-18 20:57:07,859] {standard_task_runner.py:52} INFO - Started process 464 to run task
+[2023-06-18 20:57:07,864] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Postgres_airflow_connection_test_v01', 'create_weather_table', '2023-06-17T00:00:00+00:00', '--job-id', '3', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres.py', '--cfg-path', '/tmp/tmpiae3bktt', '--error-file', '/tmp/tmpddb6a378']
+[2023-06-18 20:57:07,868] {standard_task_runner.py:77} INFO - Job 3: Subtask create_weather_table
+[2023-06-18 20:57:07,920] {logging_mixin.py:104} INFO - Running <TaskInstance: Postgres_airflow_connection_test_v01.create_weather_table 2023-06-17T00:00:00+00:00 [running]> on host ac1bf3331ec5
+[2023-06-18 20:57:07,964] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=Postgres_airflow_connection_test_v01
+AIRFLOW_CTX_TASK_ID=create_weather_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
+[2023-06-18 20:57:07,966] {postgres.py:69} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          
+[2023-06-18 20:57:07,977] {base.py:74} INFO - Using connection to: id: postgres_localhost. Host: host.docker.internal, Port: 5432, Schema: airflow, Login: airflow, Password: XXXXXXXX, extra: None
+[2023-06-18 20:57:07,991] {dbapi.py:180} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          , parameters: None
+[2023-06-18 20:57:07,995] {dbapi.py:186} INFO - Rows affected: -1
+[2023-06-18 20:57:07,996] {postgres.py:73} INFO - NOTICE:  relation "master_weather" already exists, skipping
+
+[2023-06-18 20:57:08,007] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=Postgres_airflow_connection_test_v01, task_id=create_weather_table, execution_date=20230617T000000, start_date=20230618T205707, end_date=20230618T205708
+[2023-06-18 20:57:08,035] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-06-18 20:57:08,076] {local_task_job.py:146} INFO - Task exited with return code 0

@@ -97,3 +97,51 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
 [2023-06-18 02:55:30,502] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=Postgres_airflow_connection_test_v01, task_id=create_pet_table, execution_date=20230617T000000, start_date=20230618T025530, end_date=20230618T025530
 [2023-06-18 02:55:30,526] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
 [2023-06-18 02:55:30,553] {local_task_job.py:146} INFO - Task exited with return code 0
+[2023-06-18 20:55:34,135] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:55:34,152] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:55:34,153] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:55:34,154] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-18 20:55:34,155] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:55:34,163] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): create_pet_table> on 2023-06-17T00:00:00+00:00
+[2023-06-18 20:55:34,167] {standard_task_runner.py:52} INFO - Started process 282 to run task
+[2023-06-18 20:55:34,172] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Postgres_airflow_connection_test_v01', 'create_pet_table', '2023-06-17T00:00:00+00:00', '--job-id', '2', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres.py', '--cfg-path', '/tmp/tmpbpcc1ohj', '--error-file', '/tmp/tmp6_y6f6kh']
+[2023-06-18 20:55:34,176] {standard_task_runner.py:77} INFO - Job 2: Subtask create_pet_table
+[2023-06-18 20:55:34,221] {logging_mixin.py:104} INFO - Running <TaskInstance: Postgres_airflow_connection_test_v01.create_pet_table 2023-06-17T00:00:00+00:00 [running]> on host ac1bf3331ec5
+[2023-06-18 20:55:34,267] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=Postgres_airflow_connection_test_v01
+AIRFLOW_CTX_TASK_ID=create_pet_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
+[2023-06-18 20:55:34,269] {postgres.py:69} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS master_weather (
+            weather_id SERIAL PRIMARY KEY,
+            forecast_date DATE NOT NULL,
+            city VARCHAR NOT NULL,
+            state VARCHAR NOT NULL,
+            max_temp INTEGER NOT NULL,
+            min_temp INTEGER NOT NULL);
+          
+[2023-06-18 20:55:34,287] {taskinstance.py:1455} ERROR - The conn_id `postgres_localhost` isn't defined
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/dbapi.py", line 173, in run
+    with closing(self.get_conn()) as conn:
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/hooks/postgres.py", line 83, in get_conn
+    conn = self.connection or self.get_connection(conn_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/base.py", line 63, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/connection.py", line 354, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_localhost` isn't defined
+[2023-06-18 20:55:34,290] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=Postgres_airflow_connection_test_v01, task_id=create_pet_table, execution_date=20230617T000000, start_date=20230618T205534, end_date=20230618T205534
+[2023-06-18 20:55:34,344] {local_task_job.py:146} INFO - Task exited with return code 1

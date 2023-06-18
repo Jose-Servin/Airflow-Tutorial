@@ -1,0 +1,53 @@
+[2023-06-18 20:57:15,963] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.insert_weather_data 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:57:15,972] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: Postgres_airflow_connection_test_v01.insert_weather_data 2023-06-17T00:00:00+00:00 [queued]>
+[2023-06-18 20:57:15,973] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:57:15,974] {taskinstance.py:1043} INFO - Starting attempt 2 of 2
+[2023-06-18 20:57:15,975] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-18 20:57:15,986] {taskinstance.py:1063} INFO - Executing <Task(PostgresOperator): insert_weather_data> on 2023-06-17T00:00:00+00:00
+[2023-06-18 20:57:15,990] {standard_task_runner.py:52} INFO - Started process 490 to run task
+[2023-06-18 20:57:15,994] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Postgres_airflow_connection_test_v01', 'insert_weather_data', '2023-06-17T00:00:00+00:00', '--job-id', '6', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_postgres.py', '--cfg-path', '/tmp/tmp0dkr1q7y', '--error-file', '/tmp/tmp9v37o19t']
+[2023-06-18 20:57:15,998] {standard_task_runner.py:77} INFO - Job 6: Subtask insert_weather_data
+[2023-06-18 20:57:16,040] {logging_mixin.py:104} INFO - Running <TaskInstance: Postgres_airflow_connection_test_v01.insert_weather_data 2023-06-17T00:00:00+00:00 [running]> on host ac1bf3331ec5
+[2023-06-18 20:57:16,079] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Servin
+AIRFLOW_CTX_DAG_ID=Postgres_airflow_connection_test_v01
+AIRFLOW_CTX_TASK_ID=insert_weather_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-17T00:00:00+00:00
+[2023-06-18 20:57:16,080] {postgres.py:69} INFO - Executing: 
+            INSERT INTO 
+            master_weather(weather_id, forecast_date, city, state, max_temp, min_temp) 
+            VALUES 
+                (1, 2023-06-18, Houston, TX, 101, 79),
+                (2, 2023-06-18, Dallas, TX, 98, 75);
+        
+[2023-06-18 20:57:16,090] {base.py:74} INFO - Using connection to: id: postgres_localhost. Host: host.docker.internal, Port: 5432, Schema: airflow, Login: airflow, Password: XXXXXXXX, extra: None
+[2023-06-18 20:57:16,099] {dbapi.py:180} INFO - Running statement: 
+            INSERT INTO 
+            master_weather(weather_id, forecast_date, city, state, max_temp, min_temp) 
+            VALUES 
+                (1, 2023-06-18, Houston, TX, 101, 79),
+                (2, 2023-06-18, Dallas, TX, 98, 75);
+        , parameters: None
+[2023-06-18 20:57:16,102] {taskinstance.py:1455} ERROR - column "houston" does not exist
+LINE 5:                 (1, 2023-06-18, Houston, TX, 101, 79),
+                                        ^
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/hooks/dbapi.py", line 184, in run
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedColumn: column "houston" does not exist
+LINE 5:                 (1, 2023-06-18, Houston, TX, 101, 79),
+                                        ^
+
+[2023-06-18 20:57:16,105] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=Postgres_airflow_connection_test_v01, task_id=insert_weather_data, execution_date=20230617T000000, start_date=20230618T205715, end_date=20230618T205716
+[2023-06-18 20:57:16,166] {local_task_job.py:146} INFO - Task exited with return code 1

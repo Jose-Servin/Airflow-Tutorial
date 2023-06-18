@@ -18,7 +18,7 @@ with DAG(
 ) as dag:
 
     create_weather_table = PostgresOperator(
-        task_id="create_pet_table",
+        task_id="create_weather_table",
         postgres_conn_id="postgres_localhost",
         sql="""
             CREATE TABLE IF NOT EXISTS master_weather (
@@ -31,4 +31,16 @@ with DAG(
           """
     )
 
-    create_weather_table
+    insert_weather_data = PostgresOperator(
+        task_id="insert_weather_data",
+        postgres_conn_id="postgres_localhost",
+        sql="""
+            INSERT INTO 
+            master_weather(forecast_date, city, state, max_temp, min_temp) 
+            VALUES 
+                (CURRENT_DATE, 'Houston', 'TX', 101, 79),
+                (CURRENT_DATE, 'Dallas', 'TX', 98, 75);
+        """
+    )
+
+    create_weather_table >> insert_weather_data
